@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 
 function App() {
-
-  const[textValue, setTextValue] = useState("");
+  const [textValue, setTextValue] = useState("");
 
   function handleClick() {
-    fetch("http://localhost:9000/"/*https://12d24246-87c1-407d-b4b2-94cce83f25b1.mock.pstmn.io"*/)
+    fetch("/test")
       .then((res) => res.text())
       .then((res) => setTextValue(res));
-
   }
 
   return (
